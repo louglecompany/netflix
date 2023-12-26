@@ -1,8 +1,8 @@
 /* CSS VARIABLES */
 :root {
-    --primary: #141414;
-    --light: #F3F3F3;
-    --dark: 	#686868;
+    --primary: #dfdfdf;
+    --light: #232323;
+    --dark: 	rgb(251, 251, 251);
   }
   
   html, body {
@@ -33,7 +33,7 @@
   
   /* HEADER */
   header {
-    padding: 20px 20px 0 20px;
+    padding: 5px 20px 20px 20px;
     position: fixed;
     top: 0;
     display: grid;  
@@ -41,27 +41,26 @@
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas: 
      "nt mn mn sb . . . "; 
-    background-color: var(--primary);
+    background-color: var(--dark);
     width: 100%;
     margin-bottom: 0px;  
   }
   
-  .netflixLogo {
+  .l {
     grid-area: nt;
     object-fit: cover;
     width: 100px;
     max-height: 100%;
-    
     padding-left: 30px;
-    padding-top: 0px;  
+    padding-top: 0px; 
+    top: 0; 
+    position: fixed;
+    margin-bottom: 10px;
   }
-  
-  .netflixLogo img {  
-    height: 35px;     
-  }
+
   
   #logo {
-    color: #E50914;  
+    color: #000000;  
     margin: 0; 
     padding: 0; 
   }
@@ -69,7 +68,7 @@
   
   .main-nav {
     grid-area: mn;
-    padding: 0 30px 0 20px;
+    padding: 20px 30px 0 20px;
   }
   
   .main-nav a {
@@ -79,12 +78,12 @@
   }
   
   .main-nav a:hover {
-    color: var(--dark);
+    color:#2e81a4;
   }
   
   .sub-nav {
     grid-area: sb;
-    padding: 0 40px 0 40px;
+    padding: 20px 40px 0 40px;
   }
   
   .sub-nav a {
@@ -94,7 +93,7 @@
   }
   
   .sub-nav a:hover {
-    color: var(--dark);
+    color:#2e81a4;
   }
   
   
@@ -138,12 +137,12 @@
   }
   
   .sub-links a {
-    color: var(--dark);
+    color: var(--light);
     text-decoration: none;
   }
   
   .sub-links a:hover {
-    color: var(--dark);
+    color:#2e81a4;
     text-decoration: underline;
   }
   
@@ -152,18 +151,84 @@
   }
   
   .logo {
-    color: var(--dark);
+    color:#2e81a4;
+   
   }
   
   
   /* FOOTER */
   footer {
-    padding: 20px;
+    padding: 0px;
     text-align: center;
-    color: var(--dark);
-    margin: 10px;
+    color: var(--light);
+    margin-top: 50px;
+    margin-bottom: -50;
   }
   
+
+  
+  
+  #wrapper {
+    width: 100%;
+  }
+  
+  #carousel1, #carousel2, #carousel3, #carousel4, #carousel5 {
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: rgb(120, 120, 120);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+    
+  }
+  
+  #next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  #content1, #content2, #content3, #content4, #content5 {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  
+  .item {
+    width: 323px;
+    height: 181px;
+    background: rgb(234, 234, 234);
+  }
+  
+  h2:hover{
+    color:#2e81a4;
+    cursor: pointer;
+  }
+
   /* MEDIA QUERIES */
   
   @media(max-width: 900px) {
