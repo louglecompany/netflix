@@ -90,7 +90,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-@media screen and (min-width: 1300px) and (max-width: 1400px) {
+@media screen and (min-width: 1280) and (max-width: 1400px) {
 /* Media query para telas menores (por exemplo, dispositivos móveis) */
 header {
 font-size:100px;
