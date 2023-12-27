@@ -115,6 +115,11 @@ font-size:100px;
     }
 
 
+    h1{
+        font-size:100px
+
+    }
+
 @keyframes ultimo {
 
     10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
